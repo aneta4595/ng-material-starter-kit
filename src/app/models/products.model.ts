@@ -6,5 +6,4 @@ export interface ProductsModel {
   readonly category: string;
   readonly image: string;
   readonly rating: number;
-
 }

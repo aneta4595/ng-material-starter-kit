@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import {ProductsComponentModule} from "./components/products/products.component-module";
 import {ProductsServiceModule} from "./services/products.service-module";
+import {CategoriesServiceModule} from "./services/categories.service-module";
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {ProductsServiceModule} from "./services/products.service-module";
   imports: [
     BrowserModule,
     CommonModule,
+    CategoriesServiceModule,
     AppRoutingModule,
     ProductsServiceModule,
     BrowserAnimationsModule,
