@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 import { ProductsComponent } from './products.component';
-import {CommonModule} from "@angular/common";
 
 @NgModule({
-    imports: [
-       CommonModule
-    ],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatListModule
+  ],
   declarations: [ProductsComponent],
   providers: [],
   exports: [ProductsComponent]
