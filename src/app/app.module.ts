@@ -9,6 +9,7 @@ import {ProductsComponentModule} from "./components/products/products.component-
 import {ProductsServiceModule} from "./services/products.service-module";
 import {CryptoServiceModule} from "./services/crypto.service-module";
 import {CategoriesServiceModule} from "./services/categories.service-module";
+import {HolidaysServiceModule} from "./services/holidays.service-module";
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import {CategoriesServiceModule} from "./services/categories.service-module";
     AppRoutingModule,
     ProductsServiceModule,
     BrowserAnimationsModule,
+    HolidaysServiceModule,
     HttpClientModule,
     ProductsComponentModule,
 

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 import { CategoriesComponent } from './categories.component';
-import {MatListModule} from "@angular/material/list";
-import {NgForOf} from "@angular/common";
+
 
 @NgModule({
-  imports: [MatCardModule, MatListModule, NgForOf],
+  imports: [MatCardModule, MatListModule, CommonModule],
   declarations: [CategoriesComponent],
   providers: [],
   exports: [CategoriesComponent]
