@@ -10,6 +10,7 @@ import {ProductsServiceModule} from "./services/products.service-module";
 import {CryptoServiceModule} from "./services/crypto.service-module";
 import {CategoriesServiceModule} from "./services/categories.service-module";
 import {HolidaysServiceModule} from "./services/holidays.service-module";
+import {EmployeeServiceModule} from "./services/employee.service-module";
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {HolidaysServiceModule} from "./services/holidays.service-module";
     BrowserModule,
     CommonModule,
     CryptoServiceModule,
+    EmployeeServiceModule,
     CategoriesServiceModule,
     AppRoutingModule,
     ProductsServiceModule,
