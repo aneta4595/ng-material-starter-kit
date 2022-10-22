@@ -12,6 +12,7 @@ import {CategoriesServiceModule} from "./services/categories.service-module";
 import {HolidaysServiceModule} from "./services/holidays.service-module";
 import {EmployeeServiceModule} from "./services/employee.service-module";
 import {ListServiceModule} from "./services/list.service-module";
+import {RegisterServiceModule} from "./services/register.service-module";
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {ListServiceModule} from "./services/list.service-module";
     CryptoServiceModule,
     EmployeeServiceModule,
     ListServiceModule,
+    RegisterServiceModule,
     CategoriesServiceModule,
     AppRoutingModule,
     ProductsServiceModule,
