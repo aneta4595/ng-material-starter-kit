@@ -11,6 +11,7 @@ import {CryptoServiceModule} from "./services/crypto.service-module";
 import {CategoriesServiceModule} from "./services/categories.service-module";
 import {HolidaysServiceModule} from "./services/holidays.service-module";
 import {EmployeeServiceModule} from "./services/employee.service-module";
+import {ListServiceModule} from "./services/list.service-module";
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {EmployeeServiceModule} from "./services/employee.service-module";
     CommonModule,
     CryptoServiceModule,
     EmployeeServiceModule,
+    ListServiceModule,
     CategoriesServiceModule,
     AppRoutingModule,
     ProductsServiceModule,

@@ -23,7 +23,16 @@ import { UserLoginComponentModule } from './components/user-login/user-login.com
 import { UserServiceModule } from './services/user.service-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'products', component: ProductsComponent }, { path: 'categories', component: CategoriesComponent }, { path: 'crypto', component: CryptoComponent }, { path: 'public-holidays', component: HolidaysComponent }, { path: 'checkbox-categories', component: CheckboxCategoriesComponent }, { path: 'categories-menu', component: CategoriesMenuComponent }, { path: 'create-product', component: ProductFormComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: 'login', component: UserLoginComponent }]), ProductsComponentModule, CategoriesComponentModule, CryptoComponentModule, HolidaysComponentModule, CheckboxCategoriesComponentModule, CategoriesServiceModule, CategoriesMenuComponentModule, ProductFormComponentModule, ProductServiceModule, EmployeeFormComponentModule, UserLoginComponentModule, UserServiceModule],
+  imports: [RouterModule.forRoot([{
+    path: 'products', component: ProductsComponent }, {
+    path: 'categories', component: CategoriesComponent }, {
+    path: 'crypto', component: CryptoComponent }, {
+    path: 'public-holidays', component: HolidaysComponent }, {
+    path: 'checkbox-categories', component: CheckboxCategoriesComponent }, {
+    path: 'categories-menu', component: CategoriesMenuComponent }, {
+    path: 'create-product', component: ProductFormComponent }, {
+    path: 'create-employee', component: EmployeeFormComponent }, {
+    path: 'login', component: UserLoginComponent }]), ProductsComponentModule, CategoriesComponentModule, CryptoComponentModule, HolidaysComponentModule, CheckboxCategoriesComponentModule, CategoriesServiceModule, CategoriesMenuComponentModule, ProductFormComponentModule, ProductServiceModule, EmployeeFormComponentModule, UserLoginComponentModule, UserServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
