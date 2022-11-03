@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { ListService } from './list.service';
+import { CatService } from './cat.service';
 
 @NgModule({
   imports: [],
   declarations: [],
-  providers: [ListService],
+  providers: [CatService],
   exports: []
 })
-export class ListServiceModule {
+export class CatServiceModule {
 }

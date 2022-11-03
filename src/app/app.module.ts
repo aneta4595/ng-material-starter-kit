@@ -5,14 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
-import {ProductsComponentModule} from "./components/products/products.component-module";
-import {ProductsServiceModule} from "./services/products.service-module";
-import {CryptoServiceModule} from "./services/crypto.service-module";
-import {CategoriesServiceModule} from "./services/categories.service-module";
-import {HolidaysServiceModule} from "./services/holidays.service-module";
-import {EmployeeServiceModule} from "./services/employee.service-module";
-import {ListServiceModule} from "./services/list.service-module";
-import {RegisterServiceModule} from "./services/register.service-module";
+
 
 
 @NgModule({
@@ -20,17 +13,10 @@ import {RegisterServiceModule} from "./services/register.service-module";
   imports: [
     BrowserModule,
     CommonModule,
-    CryptoServiceModule,
-    EmployeeServiceModule,
-    ListServiceModule,
-    RegisterServiceModule,
-    CategoriesServiceModule,
     AppRoutingModule,
-    ProductsServiceModule,
     BrowserAnimationsModule,
-    HolidaysServiceModule,
     HttpClientModule,
-    ProductsComponentModule,
+
 
   ],
   providers: [],
