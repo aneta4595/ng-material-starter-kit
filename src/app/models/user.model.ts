@@ -1,4 +1,7 @@
 export interface UserModel {
-  readonly username: string;
-  readonly password: string;
+  readonly name: {
+    readonly firstname: string;
+    readonly lastname: string;
+  }
+  readonly email: string;
 }

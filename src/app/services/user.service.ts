@@ -8,7 +8,7 @@ export class UserService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  create(user: UserModel): Observable<UserModel> {
-    return this._httpClient.post<UserModel>('https://fakestoreapi.com/auth/login', user);
+  getOne(id: string): Observable<UserModel> {
+    return this._httpClient.get<UserModel>('https://fakestoreapi.com/users/' + id);
   }
 }

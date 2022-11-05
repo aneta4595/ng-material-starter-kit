@@ -67,19 +67,23 @@
       "list": "<section>\n  $content$\n</section>",
       "item": "<mat-checkbox *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-checkbox>"
     }
+  },
+  "details": {
+    "content": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "$content$"
     },
-    "details": {
-      "content": {
-        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-        "content": "$content$"
-      },
-      "text": {
-        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-        "content": "{{ $itemVariable$ }}"
-      },
-      "title-description": {
-        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-        "content": "<h1>$title$</h1>\n<p>$description$</p>"
-      }
+    "text": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "{{ $itemVariable$ }}"
+    },
+    "title-description": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<h1>$title$</h1>\n<p>$description$</p>"
+    },
+    "user": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<h1>$name$</h1>\n<p>$email$</p>"
     }
   }
+}
