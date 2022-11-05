@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { UserService } from './user.service';
+import { AgeService } from './age.service';
 
 @NgModule({
   imports: [],
   declarations: [],
-  providers: [UserService],
+  providers: [AgeService],
   exports: []
 })
-export class UserServiceModule {
+export class AgeServiceModule {
 }
