@@ -8,7 +8,7 @@ export class UserService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  getOne(id: string): Observable<UserModel> {
+  getOne(id: string): Observable<UserModel>  {
     return this._httpClient.get<UserModel>('https://fakestoreapi.com/users/' + id);
   }
 }

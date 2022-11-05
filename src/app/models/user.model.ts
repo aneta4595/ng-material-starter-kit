@@ -3,5 +3,6 @@ export interface UserModel {
     readonly firstname: string;
     readonly lastname: string;
   }
+
   readonly email: string;
 }
