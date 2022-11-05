@@ -7,6 +7,7 @@ import { UserComponent } from './user.component';
   imports: [MatCardModule, CommonModule],
   declarations: [UserComponent],
   providers: [],
+
   exports: [UserComponent]
 })
 export class UserComponentModule {

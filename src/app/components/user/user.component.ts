@@ -12,6 +12,7 @@ import { UserService } from '../../services/user.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserComponent {
+
   readonly data$: Observable<UserModel> = this._activatedRoute.params.
   pipe(switchMap(data => this._userService.getOne(data['id'])));
 
