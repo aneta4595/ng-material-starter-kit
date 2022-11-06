@@ -20,6 +20,7 @@ import { UserServiceModule } from './services/user.service-module';
   imports: [RouterModule.forRoot([{ path: 'cat-facts', component: CatFactsComponent }, { path: 'age/:name', component: AgeComponent }, { path: 'product/:id', component: ProductComponent }, { path: 'cart/:id', component: CartComponent }, { path: 'user/:id', component: UserComponent }]), CatFactsComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, ProductComponentModule, ProductServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule
 {
 

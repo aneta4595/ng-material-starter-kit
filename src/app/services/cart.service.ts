@@ -9,6 +9,7 @@ export class CartService {
   }
 
   getOne(id: string): Observable<CartModel> {
+
     return this._httpClient.get<CartModel>('https://fakestoreapi.com/carts/' + id);
   }
 }
