@@ -12,6 +12,7 @@ import { CartService } from '../../services/cart.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartComponent {
+
   readonly data$: Observable<CartModel> = this._activatedRoute.params.
   pipe(switchMap(data => this._cartService.getOne(data['id'])));
 
