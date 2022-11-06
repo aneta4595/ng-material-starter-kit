@@ -18,6 +18,7 @@
     "input-text": "<input matInput type=\"text\" placeholder=\"$label$\" formControlName=\"$formControlName$\" required>",
     "input-number": "<input matInput type=\"number\" placeholder=\"$label$\" formControlName=\"$formControlName$\" required>",
     "input-submit": "<button type=\"submit\" mat-raised-button color=\"primary\">$content$</button>"
+
   },
   "forms": {
     "mat-form": {
@@ -81,10 +82,13 @@
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$title$</h1>\n<p>$description$</p>"
     },
-    "user":
-      {
+    "jokes": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-      "content": "<h1>$name$</h1>\n<p>$email$</p>"
+      "content": "<h1>$title$</h1>\n<p>$setup$</p><b><p>$punchline$</p></b> <br> <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/path', $itemVariable$]\">$text$</button>"
+
+
+
     }
+
   }
 }
