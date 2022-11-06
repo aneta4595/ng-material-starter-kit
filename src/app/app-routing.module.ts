@@ -6,6 +6,7 @@ import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 import { UserComponent } from './components/user/user.component';
 import { JokeComponent } from './components/joke/joke.component';
+import { CartsComponent } from './components/carts/carts.component';
 import { CatFactsComponentModule } from './components/cat-facts/cat-facts.component-module';
 import { CatServiceModule } from './services/cat.service-module';
 import { AgeComponentModule } from './components/age/age.component-module';
@@ -18,9 +19,11 @@ import { UserComponentModule } from './components/user/user.component-module';
 import { UserServiceModule } from './services/user.service-module';
 import { JokeComponentModule } from './components/joke/joke.component-module';
 import { JokeServiceModule } from './services/joke.service-module';
+import { CartsComponentModule } from './components/carts/carts.component-module';
+import { CartsServiceModule } from './services/carts.service-module';
 
 @NgModule({
-  imports: [RouterModule.forRoot([{ path: 'cat-facts', component: CatFactsComponent }, { path: 'age/:name', component: AgeComponent }, { path: 'product/:id', component: ProductComponent }, { path: 'cart/:id', component: CartComponent }, { path: 'user/:id', component: UserComponent }, { path: 'joke/:id', component: JokeComponent }]), CatFactsComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, ProductComponentModule, ProductServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, JokeComponentModule, JokeServiceModule],
+  imports: [RouterModule.forRoot([{ path: 'cat-facts', component: CatFactsComponent }, { path: 'age/:name', component: AgeComponent }, { path: 'product/:id', component: ProductComponent }, { path: 'cart/:id', component: CartComponent }, { path: 'user/:id', component: UserComponent }, { path: 'joke/:id', component: JokeComponent }, { path: 'carts/:id', component: CartsComponent }]), CatFactsComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, ProductComponentModule, ProductServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, JokeComponentModule, JokeServiceModule, CartsComponentModule, CartsServiceModule],
   exports: [RouterModule]
 })
 

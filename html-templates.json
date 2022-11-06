@@ -82,13 +82,13 @@
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$title$</h1>\n<p>$description$</p>"
     },
-    "jokes": {
-      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-      "content": "<h1>$title$</h1>\n<p>$setup$</p><b><p>$punchline$</p></b> <br> <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/path', $itemVariable$]\">$text$</button>"
-
-
-
+      "cart": {
+        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+        "content": "<h1>$title$</h1>\n<p>You have {{ $itemVariable$ }} products in the cart</p>"
+      },
+      "jokes": {
+        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+        "content": "<h1>$title$</h1>\n<p>$setup$</p><b><p>$punchline$</p></b> <br> <button type=\"button\" class=\"btn btn-primary\" [routerLink]=\"['/path', $itemVariable$]\">$text$</button>"
+      }
     }
-
   }
-}
