@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { CatModel } from '../models/cat.model';
 
 @Injectable()
-export class CatService {
+export class CategoriesService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  getOne(): Observable<CatModel> {
-
-    return this._httpClient.get<CatModel>('https://catfact.ninja/fact');
+  getAll(): Observable<string[]> {
+    return this._httpClient.get<string[]>('https://fakestoreapi.com/products/categories');
   }
 }
