@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-title>Order</mat-card-title>
+  <mat-card-content><mat-list role="list" fxLayout="row">
+  <mat-list-item role="listitem" *ngFor="let item of order | async" (click)="sort(item)">
+  {{item}}
+</mat-list-item>
+</mat-list></mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>Employees</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of employee$ | async"> {{item.id}}. {{item.name}}, {{item.salary}} $ </mat-list-item></mat-list></mat-card-content>
+
+</mat-card>
