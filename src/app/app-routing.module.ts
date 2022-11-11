@@ -23,6 +23,7 @@ import { CartsComponentModule } from './components/carts/carts.component-module'
 import { CartsServiceModule } from './services/carts.service-module';
 
 @NgModule({
+
   imports: [RouterModule.forRoot([{ path: 'cat-facts', component: CatFactsComponent }, { path: 'age/:name', component: AgeComponent }, { path: 'product/:id', component: ProductComponent }, { path: 'cart/:id', component: CartComponent }, { path: 'user/:id', component: UserComponent }, { path: 'joke/:id', component: JokeComponent }, { path: 'carts/:id', component: CartsComponent }]), CatFactsComponentModule, CatServiceModule, AgeComponentModule, AgeServiceModule, ProductComponentModule, ProductServiceModule, CartComponentModule, CartServiceModule, UserComponentModule, UserServiceModule, JokeComponentModule, JokeServiceModule, CartsComponentModule, CartsServiceModule],
   exports: [RouterModule]
 })

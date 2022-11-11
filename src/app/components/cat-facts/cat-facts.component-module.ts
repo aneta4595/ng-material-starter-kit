@@ -9,5 +9,6 @@ import { CatFactsComponent } from './cat-facts.component';
   providers: [],
   exports: [CatFactsComponent]
 })
+
 export class CatFactsComponentModule {
 }
