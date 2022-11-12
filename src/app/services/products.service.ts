@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ProductsModel } from '../models/products.model';
 
+
 @Injectable()
 export class ProductsService {
 
@@ -12,6 +13,9 @@ export class ProductsService {
   getAll(): Observable<ProductsModel[]> {
     return this._httpClient.get<ProductsModel[]>('https://fakestoreapi.com/products');
 
+  }
+  getOne(id: string): Observable<ProductsModel> {
+    return this._httpClient.get<ProductsModel>('https://fakestoreapi.com/products/' + id);
   }
 
   delete(id: string): Observable<ProductsModel> {
