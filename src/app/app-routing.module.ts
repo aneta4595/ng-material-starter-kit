@@ -5,6 +5,7 @@ import { FilteredListSubjectComponent } from './components/filtered-list-subject
 import { SortedProductsComponent } from './components/sorted-products/sorted-products.component';
 import { SortEmployeeComponent } from './components/sort-employee/sort-employee.component';
 import { FilteredEmployeeComponent } from './components/filtered-employee/filtered-employee.component';
+import { ProductsDeleteComponent } from './components/products-delete/products-delete.component';
 import { FilteredListRoutingComponentModule } from './components/filtered-list-routing/filtered-list-routing.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
 import { FilteredListSubjectComponentModule } from './components/filtered-list-subject/filtered-list-subject.component-module';
@@ -13,10 +14,11 @@ import { SortedProductsComponentModule } from './components/sorted-products/sort
 import { SortEmployeeComponentModule } from './components/sort-employee/sort-employee.component-module';
 import { EmployeeServiceModule } from './services/employee.service-module';
 import { FilteredEmployeeComponentModule } from './components/filtered-employee/filtered-employee.component-module';
+import { ProductsDeleteComponentModule } from './components/products-delete/products-delete.component-module';
 
 @NgModule({
 
-  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee', component: FilteredEmployeeComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee/:age', component: FilteredEmployeeComponent }, { path: 'refresh-products', component: ProductsDeleteComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule, ProductsDeleteComponentModule],
   exports: [RouterModule]
 })
 
