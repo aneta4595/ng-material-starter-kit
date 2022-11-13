@@ -12,6 +12,7 @@ import { CryptoMasterDetailsComponent } from './components/crypto-master-details
 import { ProductsEmptyComponent } from './components/products-empty/products-empty.component';
 import { CategoriesEmptyComponent } from './components/categories-empty/categories-empty.component';
 import { CryptoEmptyComponent } from './components/crypto-empty/crypto-empty.component';
+import { HolidaysComponent } from './components/holidays/holidays.component';
 import { FilteredListRoutingComponentModule } from './components/filtered-list-routing/filtered-list-routing.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
 import { FilteredListSubjectComponentModule } from './components/filtered-list-subject/filtered-list-subject.component-module';
@@ -28,10 +29,12 @@ import { CryptoCurrencyServiceModule } from './services/crypto-currency.service-
 import { ProductsEmptyComponentModule } from './components/products-empty/products-empty.component-module';
 import { CategoriesEmptyComponentModule } from './components/categories-empty/categories-empty.component-module';
 import { CryptoEmptyComponentModule } from './components/crypto-empty/crypto-empty.component-module';
+import { HolidaysComponentModule } from './components/holidays/holidays.component-module';
+import { HolidaysServiceModule } from './services/holidays.service-module';
 
 @NgModule({
 
-  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee/:age', component: FilteredEmployeeComponent }, { path: 'refresh-products', component: ProductsDeleteComponent }, { path: 'products-master-details', component: ProductsMasterListComponent }, { path: 'employees-master-details', component: EmployeeMasterComponent }, { path: 'crypto-master-details', component: CryptoMasterDetailsComponent }, { path: 'productss', component: ProductsEmptyComponent }, { path: 'categoriess', component: CategoriesEmptyComponent }, { path: 'cryptos', component: CryptoEmptyComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule, ProductsDeleteComponentModule, ProductsMasterListComponentModule, EmployeeMasterComponentModule, CryptoMasterDetailsComponentModule, CryptoCurrencyServiceModule, ProductsEmptyComponentModule, CategoriesEmptyComponentModule, CryptoEmptyComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee/:age', component: FilteredEmployeeComponent }, { path: 'refresh-products', component: ProductsDeleteComponent }, { path: 'products-master-details', component: ProductsMasterListComponent }, { path: 'employees-master-details', component: EmployeeMasterComponent }, { path: 'crypto-master-details', component: CryptoMasterDetailsComponent }, { path: 'productss', component: ProductsEmptyComponent }, { path: 'categoriess', component: CategoriesEmptyComponent }, { path: 'cryptos', component: CryptoEmptyComponent }, { path: 'public-holidays', component: HolidaysComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule, ProductsDeleteComponentModule, ProductsMasterListComponentModule, EmployeeMasterComponentModule, CryptoMasterDetailsComponentModule, CryptoCurrencyServiceModule, ProductsEmptyComponentModule, CategoriesEmptyComponentModule, CryptoEmptyComponentModule, HolidaysComponentModule, HolidaysServiceModule],
   exports: [RouterModule]
 })
 
