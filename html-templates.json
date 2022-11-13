@@ -44,7 +44,11 @@
       "list": "<mat-selection-list role=\"list\">$content$</mat-selection-list>",
       "item": "<mat-list-option role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-option>"
     },
-    "navbar": {
+    "smart-selection-list": {
+      "list": "<mat-selection-list role=\"list\" *ngIf=\"$itemVariable$ | async as list, else loading\">$content$</mat-selection-list> <ng-template #loading>\n    <mat-progress-spinner\n        [color]=\"'primary'\"\n        [mode]=\"'indeterminate'\"\n        [value]=\"50\">\n      </mat-progress-spinner>\n  </ng-template>",
+      "item": "<mat-list-option role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-option>"
+    },
+      "navbar": {
       "list": "<mat-list role=\"list\" fxLayout=\"row\">\n  $content$\n</mat-list>",
       "item": "<mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">\n  {{$itemVariable$}}\n</mat-list-item>"
     },
