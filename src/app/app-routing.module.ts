@@ -8,6 +8,7 @@ import { FilteredEmployeeComponent } from './components/filtered-employee/filter
 import { ProductsDeleteComponent } from './components/products-delete/products-delete.component';
 import { ProductsMasterListComponent } from './components/products-master-list/products-master-list.component';
 import { EmployeeMasterComponent } from './components/employee-master/employee-master.component';
+import { CryptoMasterDetailsComponent } from './components/crypto-master-details/crypto-master-details.component';
 import { FilteredListRoutingComponentModule } from './components/filtered-list-routing/filtered-list-routing.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
 import { FilteredListSubjectComponentModule } from './components/filtered-list-subject/filtered-list-subject.component-module';
@@ -19,10 +20,12 @@ import { FilteredEmployeeComponentModule } from './components/filtered-employee/
 import { ProductsDeleteComponentModule } from './components/products-delete/products-delete.component-module';
 import { ProductsMasterListComponentModule } from './components/products-master-list/products-master-list.component-module';
 import { EmployeeMasterComponentModule } from './components/employee-master/employee-master.component-module';
+import { CryptoMasterDetailsComponentModule } from './components/crypto-master-details/crypto-master-details.component-module';
+import { CryptoCurrencyServiceModule } from './services/crypto-currency.service-module';
 
 @NgModule({
 
-  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee/:age', component: FilteredEmployeeComponent }, { path: 'refresh-products', component: ProductsDeleteComponent }, { path: 'products-master-details', component: ProductsMasterListComponent }, { path: 'employees-master-details', component: EmployeeMasterComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule, ProductsDeleteComponentModule, ProductsMasterListComponentModule, EmployeeMasterComponentModule],
+  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee/:age', component: FilteredEmployeeComponent }, { path: 'refresh-products', component: ProductsDeleteComponent }, { path: 'products-master-details', component: ProductsMasterListComponent }, { path: 'employees-master-details', component: EmployeeMasterComponent }, { path: 'crypto-master-details', component: CryptoMasterDetailsComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule, ProductsDeleteComponentModule, ProductsMasterListComponentModule, EmployeeMasterComponentModule, CryptoMasterDetailsComponentModule, CryptoCurrencyServiceModule],
   exports: [RouterModule]
 })
 

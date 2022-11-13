@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import {ProductsServiceModule} from "./services/products.service-module";
 import {CategoriesServiceModule} from "./services/categories.service-module";
 import {EmployeeServiceModule} from "./services/employee.service-module";
+import {CryptoCurrencyServiceModule} from "./services/crypto-currency.service-module";
 
 
 
@@ -18,6 +19,7 @@ import {EmployeeServiceModule} from "./services/employee.service-module";
     CommonModule,
     ProductsServiceModule,
     EmployeeServiceModule,
+    CryptoCurrencyServiceModule,
     CategoriesServiceModule,
     AppRoutingModule,
     BrowserAnimationsModule,
