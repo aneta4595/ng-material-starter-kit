@@ -6,6 +6,7 @@ import { CryptoModel } from '../models/crypto.model';
 @Injectable()
 export class CryptoCurrencyService {
   constructor(private _httpClient: HttpClient) {
+
   }
 
   getAll(): Observable<CryptoModel[]> {

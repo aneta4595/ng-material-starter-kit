@@ -56,6 +56,10 @@
       "list": "<mat-chip-list aria-label=\"Fish selection\">\n  $content$\n</mat-chip-list>",
       "item": "<mat-chip *ngFor=\"let $itemVariable$ of $listVariable$\">\n {{$itemVariable$}}\n</mat-chip>"
     },
+    "smart-chip-list": {
+      "list": "<mat-chip-list aria-label=\"Fish selection\" *ngIf=\"list$ | async as list, else loading\">\n  $content$\n</mat-chip-list> <ng-template #loading>\n    <mat-progress-spinner\n        [color]=\"'primary'\"\n        [mode]=\"'indeterminate'\"\n        [value]=\"50\">\n      </mat-progress-spinner>\n  </ng-template>",
+      "item": "<mat-chip *ngFor=\"let $itemVariable$ of $listVariable$\">\n {{$itemVariable$}}\n</mat-chip>"
+    },
     "accordion": {
       "list": "<mat-accordion>\n   $content$\n</mat-accordion>",
       "item": "<mat-expansion-panel *ngFor=\"let $itemVariable$ of $listVariable$\">\n    <mat-expansion-panel-header>\n      <mat-panel-title>\n        This is a title\n      </mat-panel-title>\n      <mat-panel-description>\n        This is a summary of the content\n      </mat-panel-description>\n    </mat-expansion-panel-header>\n    {{$itemVariable$}}\n  </mat-expansion-panel>"

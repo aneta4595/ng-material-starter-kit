@@ -6,6 +6,7 @@ import { CryptoCurrencyService } from './crypto-currency.service';
   declarations: [],
   providers: [CryptoCurrencyService],
   exports: []
+
 })
 export class CryptoCurrencyServiceModule {
 }
