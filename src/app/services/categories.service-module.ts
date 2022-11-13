@@ -7,6 +7,5 @@ import { CategoriesService } from './categories.service';
   providers: [CategoriesService],
   exports: []
 })
-
 export class CategoriesServiceModule {
 }

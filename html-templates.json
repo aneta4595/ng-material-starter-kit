@@ -21,7 +21,6 @@
     "input-text": "<input matInput type=\"text\" placeholder=\"$label$\" formControlName=\"$formControlName$\" required>",
     "input-number": "<input matInput type=\"number\" placeholder=\"$label$\" formControlName=\"$formControlName$\" required>",
     "input-submit": "<button type=\"submit\" mat-raised-button color=\"primary\">$content$</button>"
-
   },
   "forms": {
     "mat-form": {
@@ -34,12 +33,11 @@
     "list": {
       "list": "<mat-list role=\"list\">$content$</mat-list>",
       "item": "<mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-item>"
-
     },
     "smart-list": {
       "list": "<mat-list role=\"list\" *ngIf=\"$itemVariable$ | async as list, else loading\">$content$</mat-list> <ng-template #loading>\n    <mat-progress-spinner\n        [color]=\"'primary'\"\n        [mode]=\"'indeterminate'\"\n        [value]=\"50\">\n      </mat-progress-spinner>\n  </ng-template>",
       "item": "<mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-item>"
-},
+    },
     "selection-list": {
       "list": "<mat-selection-list role=\"list\">$content$</mat-selection-list>",
       "item": "<mat-list-option role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-option>"
@@ -48,7 +46,7 @@
       "list": "<mat-selection-list role=\"list\" *ngIf=\"$itemVariable$ | async as list, else loading\">$content$</mat-selection-list> <ng-template #loading>\n    <mat-progress-spinner\n        [color]=\"'primary'\"\n        [mode]=\"'indeterminate'\"\n        [value]=\"50\">\n      </mat-progress-spinner>\n  </ng-template>",
       "item": "<mat-list-option role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-list-option>"
     },
-      "navbar": {
+    "navbar": {
       "list": "<mat-list role=\"list\" fxLayout=\"row\">\n  $content$\n</mat-list>",
       "item": "<mat-list-item role=\"listitem\" *ngFor=\"let $itemVariable$ of $listVariable$\">\n  {{$itemVariable$}}\n</mat-list-item>"
     },
@@ -83,21 +81,24 @@
     "checkbox": {
       "list": "<section>\n  $content$\n</section>",
       "item": "<mat-checkbox *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-checkbox>"
-    }
-  },
-  "details": {
-    "content": {
-      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-      "content": "$content$"
     },
-    "text": {
-      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-      "content": "{{ $itemVariable$ }}"
+    "smart-checkbox": {
+      "list": "<section>\n  $content$\n</section>",
+      "item": "<mat-checkbox *ngFor=\"let $itemVariable$ of $listVariable$\">{{$itemVariable$}}</mat-checkbox>"
     },
-    "title-description": {
-      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
-      "content": "<h1>$title$</h1>\n<p>$description$</p>"
-    },
+    "details": {
+      "content": {
+        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+        "content": "$content$"
+      },
+      "text": {
+        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+        "content": "{{ $itemVariable$ }}"
+      },
+      "title-description": {
+        "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+        "content": "<h1>$title$</h1>\n<p>$description$</p>"
+      },
       "cart": {
         "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
         "content": "<h1>$title$</h1>\n<p>You have {{ $itemVariable$ }} products in the cart</p>"
@@ -108,3 +109,4 @@
       }
     }
   }
+}
