@@ -34,13 +34,54 @@ import { HolidaysComponentModule } from './components/holidays/holidays.componen
 import { HolidaysServiceModule } from './services/holidays.service-module';
 import { CategoriesCheckboxEmptyComponentModule } from './components/categories-checkbox-empty/categories-checkbox-empty.component-module';
 
+
 @NgModule({
-
-  imports: [RouterModule.forRoot([{ path: 'products/:category', component: FilteredListRoutingComponent }, { path: 'products', component: FilteredListSubjectComponent }, { path: 'sorted-products', component: SortedProductsComponent }, { path: 'sorted-employee', component: SortEmployeeComponent }, { path: 'employee/:age', component: FilteredEmployeeComponent }, { path: 'refresh-products', component: ProductsDeleteComponent }, { path: 'products-master-details', component: ProductsMasterListComponent }, { path: 'employees-master-details', component: EmployeeMasterComponent }, { path: 'crypto-master-details', component: CryptoMasterDetailsComponent }, { path: 'productss', component: ProductsEmptyComponent }, { path: 'categoriess', component: CategoriesEmptyComponent }, { path: 'cryptos', component: CryptoEmptyComponent }, { path: 'public-holidays', component: HolidaysComponent }, { path: 'checkbox-categories', component: CategoriesCheckboxEmptyComponent }]), FilteredListRoutingComponentModule, CategoriesServiceModule, FilteredListSubjectComponentModule, ProductsServiceModule, SortedProductsComponentModule, SortEmployeeComponentModule, EmployeeServiceModule, FilteredEmployeeComponentModule, ProductsDeleteComponentModule, ProductsMasterListComponentModule, EmployeeMasterComponentModule, CryptoMasterDetailsComponentModule, CryptoCurrencyServiceModule, ProductsEmptyComponentModule, CategoriesEmptyComponentModule, CryptoEmptyComponentModule, HolidaysComponentModule, HolidaysServiceModule, CategoriesCheckboxEmptyComponentModule],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot([
+      { path: 'products/:category', component: FilteredListRoutingComponent },
+      { path: 'products', component: FilteredListSubjectComponent },
+      { path: 'sorted-products', component: SortedProductsComponent },
+      { path: 'sorted-employee', component: SortEmployeeComponent },
+      { path: 'employee/:age', component: FilteredEmployeeComponent },
+      { path: 'refresh-products', component: ProductsDeleteComponent },
+      {
+        path: 'products-master-details',
+        component: ProductsMasterListComponent,
+      },
+      { path: 'employees-master-details', component: EmployeeMasterComponent },
+      {
+        path: 'crypto-master-details',
+        component: CryptoMasterDetailsComponent,
+      },
+      { path: 'productss', component: ProductsEmptyComponent },
+      { path: 'categoriess', component: CategoriesEmptyComponent },
+      { path: 'cryptos', component: CryptoEmptyComponent },
+      { path: 'public-holidays', component: HolidaysComponent },
+      {
+        path: 'checkbox-categories',
+        component: CategoriesCheckboxEmptyComponent,
+      },
+    ]),
+    FilteredListRoutingComponentModule,
+    CategoriesServiceModule,
+    FilteredListSubjectComponentModule,
+    ProductsServiceModule,
+    SortedProductsComponentModule,
+    SortEmployeeComponentModule,
+    EmployeeServiceModule,
+    FilteredEmployeeComponentModule,
+    ProductsDeleteComponentModule,
+    ProductsMasterListComponentModule,
+    EmployeeMasterComponentModule,
+    CryptoMasterDetailsComponentModule,
+    CryptoCurrencyServiceModule,
+    ProductsEmptyComponentModule,
+    CategoriesEmptyComponentModule,
+    CryptoEmptyComponentModule,
+    HolidaysComponentModule,
+    HolidaysServiceModule,
+    CategoriesCheckboxEmptyComponentModule,
+  ],
+  exports: [RouterModule],
 })
-
-
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}
