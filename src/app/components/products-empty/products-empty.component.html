@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-title>Products list</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list" *ngIf="list$ | async as list, else loading">
+      <ng-container *ngIf="list.length > 0; else emptyState"></ng-container>
+      <mat-list-item role="listitem" *ngFor="let item of list">{{item.id}} {{item.title}}</mat-list-item>
+    <ng-template #emptyState>
+      Oops! There is no data
+    </ng-template>
+    </mat-list>
+  <ng-template #loading>
+    <mat-progress-spinner
+        [color]="'primary'"
+        [mode]="'indeterminate'"
+        [value]="50">
+      </mat-progress-spinner>
+  </ng-template>
+  </mat-card-content>
+
+</mat-card>

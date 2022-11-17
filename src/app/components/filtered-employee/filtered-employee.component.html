@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Age</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list" fxLayout="row">
+    <mat-list-item role="listitem" *ngFor="let item of age | async" [routerLink]="'/employee/' + item">
+      {{item}}
+    </mat-list-item>
+  </mat-list></mat-card-content>
+
+</mat-card>
+<mat-card>
+  <mat-card-title>Employee</mat-card-title>
+  <mat-card-content><mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let item of employees$ | async">{{item.name}}, Age: {{item.age}}
+
+    </mat-list-item>
+
+  </mat-list>
+
+  </mat-card-content>
+
+</mat-card>
