@@ -14,6 +14,7 @@ import { CategoriesEmptyComponent } from './components/categories-empty/categori
 import { CryptoEmptyComponent } from './components/crypto-empty/crypto-empty.component';
 import { HolidaysComponent } from './components/holidays/holidays.component';
 import { CategoriesCheckboxEmptyComponent } from './components/categories-checkbox-empty/categories-checkbox-empty.component';
+import { ProductsTableComponent } from './components/products-table/products-table.component';
 import { FilteredListRoutingComponentModule } from './components/filtered-list-routing/filtered-list-routing.component-module';
 import { CategoriesServiceModule } from './services/categories.service-module';
 import { FilteredListSubjectComponentModule } from './components/filtered-list-subject/filtered-list-subject.component-module';
@@ -33,7 +34,7 @@ import { CryptoEmptyComponentModule } from './components/crypto-empty/crypto-emp
 import { HolidaysComponentModule } from './components/holidays/holidays.component-module';
 import { HolidaysServiceModule } from './services/holidays.service-module';
 import { CategoriesCheckboxEmptyComponentModule } from './components/categories-checkbox-empty/categories-checkbox-empty.component-module';
-
+import { ProductsTableComponentModule } from './components/products-table/products-table.component-module';
 
 @NgModule({
   imports: [
@@ -44,23 +45,15 @@ import { CategoriesCheckboxEmptyComponentModule } from './components/categories-
       { path: 'sorted-employee', component: SortEmployeeComponent },
       { path: 'employee/:age', component: FilteredEmployeeComponent },
       { path: 'refresh-products', component: ProductsDeleteComponent },
-      {
-        path: 'products-master-details',
-        component: ProductsMasterListComponent,
-      },
+      { path: 'products-master-details', component: ProductsMasterListComponent },
       { path: 'employees-master-details', component: EmployeeMasterComponent },
-      {
-        path: 'crypto-master-details',
-        component: CryptoMasterDetailsComponent,
-      },
+      { path: 'crypto-master-details', component: CryptoMasterDetailsComponent },
       { path: 'productss', component: ProductsEmptyComponent },
       { path: 'categoriess', component: CategoriesEmptyComponent },
       { path: 'cryptos', component: CryptoEmptyComponent },
       { path: 'public-holidays', component: HolidaysComponent },
-      {
-        path: 'checkbox-categories',
-        component: CategoriesCheckboxEmptyComponent,
-      },
+      { path: 'checkbox-categories', component: CategoriesCheckboxEmptyComponent },
+      { path: 'product-search', component: ProductsTableComponent }
     ]),
     FilteredListRoutingComponentModule,
     CategoriesServiceModule,
@@ -81,7 +74,8 @@ import { CategoriesCheckboxEmptyComponentModule } from './components/categories-
     HolidaysComponentModule,
     HolidaysServiceModule,
     CategoriesCheckboxEmptyComponentModule,
+    ProductsTableComponentModule
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
