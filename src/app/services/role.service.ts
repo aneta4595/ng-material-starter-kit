@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { RoleModel } from '../models/role.model';
 
 @Injectable()
+
 export class RoleService {
   constructor(private _httpClient: HttpClient) {
   }

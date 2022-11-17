@@ -8,13 +8,14 @@ import { HttpClientModule } from "@angular/common/http";
 import {RoleServiceModule} from "./services/role.service-module";
 import {UserServiceModule} from "./services/user.service-module";
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    UserServiceModule,
+  UserServiceModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RoleServiceModule
