@@ -8,7 +8,7 @@ export class UserService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  getOne(id: string): Observable<UserModel>     {
-    return this._httpClient.get<UserModel>('https://fakestoreapi.com/users/' + id);
+  create(user: UserModel): Observable<void> {
+    return this._httpClient.post<void>('https://636ce2d8ab4814f2b2712854.mockapi.io/user', user);
   }
 }
