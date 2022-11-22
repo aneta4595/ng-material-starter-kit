@@ -8,7 +8,6 @@ export class ProductsService {
   constructor(private _httpClient: HttpClient) {
   }
 
-
   getAll(): Observable<ProductsModel[]> {
     return this._httpClient.get<ProductsModel[]>('https://fakestoreapi.com/products');
   }

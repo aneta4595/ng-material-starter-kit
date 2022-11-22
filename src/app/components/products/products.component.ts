@@ -42,6 +42,7 @@ export class ProductsComponent {
   }
 
 
+
   selectCategory(category: string): void {
     this._categorySubject.next(category)
   }
