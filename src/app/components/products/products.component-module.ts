@@ -11,6 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
   declarations: [ProductsComponent],
   providers: [],
   exports: [ProductsComponent]
+
 })
 export class ProductsComponentModule {
 }

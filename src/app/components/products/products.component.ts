@@ -49,6 +49,7 @@ export class ProductsComponent {
 
   sort(order: string): void {
     this._orderSubject.next(order)
+
   }
 
   remove(id: string): void {
