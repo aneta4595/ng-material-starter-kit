@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class CategoriesService {
-
   constructor(private _httpClient: HttpClient) {
   }
 
