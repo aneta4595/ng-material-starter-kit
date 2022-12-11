@@ -1,34 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ProductsComponent } from './components/products/products.component';
 import { UserWithRoleComponent } from './components/user-with-role/user-with-role.component';
 import { JobComponent } from './components/job/job.component';
-import { JobWithRoleComponent } from './components/job-with-role/job-with-role.component';
-import { ProductsComponentModule } from './components/products/products.component-module';
-import { ProductsServiceModule } from './services/products.service-module';
+import { CartFormComponent } from './components/cart-form/cart-form.component';
 import { UserWithRoleComponentModule } from './components/user-with-role/user-with-role.component-module';
-import { UserServiceModule } from './services/user.service-module';
 import { JobComponentModule } from './components/job/job.component-module';
-import { JobTagServiceModule } from './services/job-tag.service-module';
-import { PostServiceModule } from './services/post.service-module';
-import { JobWithRoleComponentModule } from './components/job-with-role/job-with-role.component-module';
+import { CartFormComponentModule } from './components/cart-form/cart-form.component-module';
+import { CartServiceModule } from './services/cart.service-module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: 'products', component: ProductsComponent },
       { path: 'create-user-with-role', component: UserWithRoleComponent },
-      { path: 'create-job-with-role', component: JobComponent },
-      { path: 'job', component: JobWithRoleComponent }
+      { path: 'job', component: JobComponent },
+      { path: ':userId/cart', component: CartFormComponent }
     ]),
-    ProductsComponentModule,
-    ProductsServiceModule,
     UserWithRoleComponentModule,
-    UserServiceModule,
     JobComponentModule,
-    JobTagServiceModule,
-    PostServiceModule,
-    JobWithRoleComponentModule
+    CartFormComponentModule,
+    CartServiceModule
   ],
   exports: [RouterModule],
 })
