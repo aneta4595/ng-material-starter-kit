@@ -5,8 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
-import {UserServiceModule} from "./services/user.service-module";
-import {JobServiceModule} from "./services/job.service-module";
+
 
 
 
@@ -17,8 +16,6 @@ import {JobServiceModule} from "./services/job.service-module";
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    UserServiceModule,
-    JobServiceModule,
     BrowserAnimationsModule,
     HttpClientModule,
 
