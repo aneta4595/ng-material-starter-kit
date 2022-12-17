@@ -1,0 +1,25 @@
+<div *ngIf="crypto$|async as item">
+<mat-chip-list aria-label="Fish selection">
+  <mat-chip *ngFor="let item of crypto$ | async">
+ {{item}}
+</mat-chip>
+</mat-chip-list>
+</div>
+
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+  <mat-label>Choose an option</mat-label>
+ <input
+   type="text"
+        matInput
+       [formControl]="search"
+       [matAutocomplete]="symbol">
+      <mat-autocomplete #symbol="matAutocomplete">
+    <mat-option *ngFor="let item of cryptos$ | async" [value]="item.symbol" (click)="add(item.symbol)">
+     {{item.symbol}}
+</mat-option>
+   </mat-autocomplete>
+</mat-form-field></mat-card-content>
+</mat-card>
