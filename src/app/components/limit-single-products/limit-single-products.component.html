@@ -1,0 +1,42 @@
+<mat-card
+  ><mat-card-title>Limit</mat-card-title>
+  <mat-card-content
+    ><form>
+      <div>
+        <mat-button-toggle-group [formControl]="limit"
+          ><mat-button-toggle
+            *ngFor="let item of limitOptions$ | async" [routerLink]="[]" [queryParams]="{limit: item}"
+            [value]="item"
+            >{{ item }}</mat-button-toggle
+          ></mat-button-toggle-group
+        >
+      </div>
+      
+    </form></mat-card-content
+  ></mat-card
+>
+<mat-card><mat-card-title></mat-card-title>
+    <mat-card-content>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon >more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" >
+            <button mat-menu-item *ngFor="let item of limitOptions$ | async" [routerLink]="[]" [queryParams]="{limit: item}" >
+              <span aria-disabled="true" >{{item}}</span>
+            </button>
+          
+            
+          </mat-menu>
+          
+</mat-card-content></mat-card>
+
+<mat-card
+  ><mat-card-title>Poroducts list</mat-card-title>
+  <mat-card-content
+    ><mat-list role="list"
+      ><mat-list-item role="listitem" *ngFor="let item of products$ | async">{{
+        item.title
+      }}</mat-list-item></mat-list
+    ></mat-card-content
+  ></mat-card
+>
