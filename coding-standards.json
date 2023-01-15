@@ -41,6 +41,9 @@
     },
     "service": {
       "type": "ANGULAR_SERVICE"
+    },
+    "query" : {
+      "type": "DATA_STRUCTURE"
     }
   }
 }

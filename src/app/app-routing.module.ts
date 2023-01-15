@@ -1,22 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { QueryStringSingleUserComponent } from './components/query-string-single-user/query-string-single-user.component';
-import { QueryArraySingleJobComponent } from './components/query-array-single-job/query-array-single-job.component';
-import { QueryStringMultiUserComponent } from './components/query-string-multi-user/query-string-multi-user.component';
-import { QueryStringSingleUserComponentModule } from './components/query-string-single-user/query-string-single-user.component-module';
-import { QueryArraySingleJobComponentModule } from './components/query-array-single-job/query-array-single-job.component-module';
-import { QueryStringMultiUserComponentModule } from './components/query-string-multi-user/query-string-multi-user.component-module';
+import { QuerySingleAccordionProductsComponent } from './components/query-single-accordion-products/query-single-accordion-products.component';
+import { QueryMultiAccordionOrganizationsComponent } from './components/query-multi-accordion-organizations/query-multi-accordion-organizations.component';
+import { QuerySingleNestedSequentialProductsWithCategoryComponent } from './components/query-single-nested-sequential-products-with-category/query-single-nested-sequential-products-with-category.component';
+import { QuerySingleAccordionProductsComponentModule } from './components/query-single-accordion-products/query-single-accordion-products.component-module';
+import { QueryMultiAccordionOrganizationsComponentModule } from './components/query-multi-accordion-organizations/query-multi-accordion-organizations.component-module';
+import { QuerySingleNestedSequentialProductsWithCategoryComponentModule } from './components/query-single-nested-sequential-products-with-category/query-single-nested-sequential-products-with-category.component-module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: 'query-string-single-user', component: QueryStringSingleUserComponent },
-      { path: 'query-array-single-job', component: QueryArraySingleJobComponent },
-      { path: 'query-string-multi-user', component: QueryStringMultiUserComponent }
+      { path: 'query-single-accordion-products', component: QuerySingleAccordionProductsComponent },
+      { path: 'query-multi-accordion-organizations', component: QueryMultiAccordionOrganizationsComponent },
+      { path: 'query-single-nested-sequential-products-with-category', component: QuerySingleNestedSequentialProductsWithCategoryComponent }
     ]),
-    QueryStringSingleUserComponentModule,
-    QueryArraySingleJobComponentModule,
-    QueryStringMultiUserComponentModule
+    QuerySingleAccordionProductsComponentModule,
+    QueryMultiAccordionOrganizationsComponentModule,
+    QuerySingleNestedSequentialProductsWithCategoryComponentModule
   ],
   exports: [RouterModule],
 })
